@@ -4,6 +4,7 @@
 <head>
     <script src="jquery.min.js"></script>
     <script src="animatescroll.js"></script>
+    <script src="/urlParams/urlParams.js"></script>
     <style>
         body {
             height: 2000px;
@@ -138,8 +139,15 @@
                 scrollSpeed: 2000,
                 easing: 'easeInOutCubic'
             });
+            setTimeout(forward,3000);
         }
-        document.onbeforeunload
+        function forward() {
+            var urlForward = urlParams.forward;
+            if (urlForward != null) {
+                window.location = forward;
+            }
+        }
+        //document.onbeforeunload
     </script>
 </body>
 
