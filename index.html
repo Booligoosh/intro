@@ -161,8 +161,12 @@
         function forward() {
             var urlForward = urlParams.forward;
             if (urlForward != null) {
-                //window.location = urlForward;
-                document.getElementById("continue").href = urlForward;
+                if(urlParams.direct == "true") {
+                    window.location = urlForward;
+                }
+                else {
+                    document.getElementById("continue").href = urlForward;
+                }
             }
             document.getElementById("continue").style = "-webkit-filter: opacity(100%);filter: opacity(100%);";
         }
