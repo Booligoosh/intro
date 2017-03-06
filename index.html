@@ -34,6 +34,18 @@
             position: absolute;
             bottom: 0;
         }
+        #continue {
+            top: 84%;
+            bottom: 50%;
+            position: fixed;
+            width: 100%;
+            height: auto;
+            color: white;
+            text-decoration: none;
+            font-size: 2em;
+            font-family: "Quicksand";
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -74,7 +86,7 @@
             </g>
         </g>
     </svg>
-
+    <a style="-webkit-filter: opacity(0%);filter: opacity(0%);" id="continue" href="/">Continue &gt;</a>
 
     <script>
         var elems = document.getElementById("g4138").children;
@@ -139,6 +151,7 @@
                 scrollSpeed: 3000,
                 easing: 'easeInOutCubic'
             });
+            document.getElementById("continue").style = "-webkit-filter: opacity(100%);filter: opacity(100%);"
             setTimeout(forward,3000);
         }
         function forward() {
