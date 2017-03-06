@@ -151,14 +151,16 @@
                 scrollSpeed: 3000,
                 easing: 'easeInOutCubic'
             });
-            document.getElementById("continue").style = "-webkit-filter: opacity(100%);filter: opacity(100%);"
+            
             setTimeout(forward,3000);
         }
         function forward() {
             var urlForward = urlParams.forward;
             if (urlForward != null) {
-                window.location = urlForward;
+                //window.location = urlForward;
+                document.getElementById("continue").href = urlForward;
             }
+            document.getElementById("continue").style = "-webkit-filter: opacity(100%);filter: opacity(100%);";
         }
         //document.onbeforeunload
     </script>
